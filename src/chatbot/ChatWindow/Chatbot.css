@@ -44,7 +44,7 @@
     .Chatwindow{
         margin-top: 0;
         width: 96vw;
-        height: 90vh;
+        height: 80vh;
         background-color: white;
     }
     .inputContainer{
@@ -53,13 +53,50 @@
     .inputContainer input{ 
         height: 2em;
     }
+    .suggestions{
+        width: 100vw;
+    }
 }
 
 .Chatbox{
     padding: 10px 2px;
 }
-.incomingChat{
+.leftcontainer{
+    width: 50%;
+}
+.rightcontainer{
+    width: 50%;
+    margin-left: auto;
+}
+.suggestions{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    height: fit-content;
+    padding: 5px 0;
+}
+.sugmessages{
     width: fit-content;
+    font-size: small;
+    /* border: 1px solid grey; */
+    background-color: beige;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+    cursor: pointer;
+}
+.sugmessages:hover{
+    transform: rotate(0) scale(1.2) translateZ(0);
+  -webkit-filter: drop-shadow(0 20px 20px  rgba(0, 0, 0, 0.70));
+  filter: drop-shadow(0 20px 20px rgba(0, 0, 0, 0.70));
+    background-color: grey;
+}
+
+.incomingChat{
+    font-size: small;
+    max-width: fit-content;
     padding: 5px 10px;
     margin-right: auto;
     border: 1px solid black;
@@ -67,6 +104,7 @@
     box-shadow: 1px 1px;
 }
 .sentChat{
+    font-size: small;
     width: fit-content;
     background-color: rgb(156, 163, 156);
     padding: 5px 10px;

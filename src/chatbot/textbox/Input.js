@@ -1,16 +1,18 @@
 import React from 'react'
 
 
+export default function Input({ onSendclick, onSendclick2, onInputchange, handleKeyDown, value, onGoClick }) {
 
 
-export default function Input({ onSendclick, onSendclick2, onInputchange}) {
   return (
-        <div className='inputContainer'>
-          <input placeholder='Message' onChange={(e)=>{onInputchange(e)}}/>
-          <button onClick={()=>{
-            onSendclick2();
-            onSendclick();
-            }}>Go</button>
-        </div>
+      <div className='inputContainer'>
+        <input placeholder='Message' value={value} onChange={(e)=>{onInputchange(e)}}
+          onKeyDown={handleKeyDown}/>
+        <button onClick={()=>{
+          onGoClick();
+          onSendclick2();
+          onSendclick();
+          }}>&#x279f;</button>
+      </div>
   )
 }
